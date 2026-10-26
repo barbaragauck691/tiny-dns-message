@@ -1,0 +1,17 @@
+{
+  "name": "tiny-dns-message",
+  "version": "0.1.0",
+  "description": "Parses and builds DNS wire-format messages with zero dependencies",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
