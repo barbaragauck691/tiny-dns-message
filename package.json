@@ -1,6 +1,6 @@
 {
   "name": "tiny-dns-message",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Parses and builds DNS wire-format messages with zero dependencies",
   "type": "module",
   "main": "src/index.js",
