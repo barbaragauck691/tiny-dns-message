@@ -31,3 +31,10 @@ Names are encoded **without** compression pointers. This is valid per RFC 1035, 
 - `TYPE`, `CLASS`, `RCODE` — frozen constant maps for the common values
 
 The `header` object has fields `id`, `qr`, `opcode`, `aa`, `tc`, `rd`, `ra`, `z`, `rcode`, `qdcount`, `ancount`, `nscount`, `arcount`. Records carry `name`, `type`, `class`, `ttl`, and `rdata` (a `Uint8Array`).
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
